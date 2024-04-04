@@ -1,6 +1,10 @@
 <?php
 
+require './Models/Product.php';
 
+$product = new Product("osso", 4.99, "cane");
+
+var_dump($product);
 
 ?>
 
