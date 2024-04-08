@@ -4,6 +4,7 @@ require_once './Models/Category.php';
 require_once './Models/Product.php';
 require_once './Models/Food.php';
 require_once './Models/Toy.php';
+require_once './Models/Bed.php';
 
 
 // Categoria
@@ -17,15 +18,27 @@ $product = new Product("Osso", 4.99, $dogCategory);
 
 // Cibo
 $croccantini = new Food("Croccantini", 19.99, $dogCategory, 5.00, "manzo", 2);
+$croccantini->setImage("https://shop-cdn-m.mediazs.com/bilder/wolf/of/wilderness/velvet/gloom/tacchino/trota/0/400/wow_redclassic_velvetgloom_frontright_12kg_1000x1000_0.jpg");
 
 // Giocattolo
 $giocattolo = new Toy("Lenza con fiocco", 2.59, $catCategory, "medium", "plastic");
+$giocattolo->setImage("https://shop-cdn-m.mediazs.com/bilder/lenza/gioco/bird/5/400/26412_pla__katzenangel_bird_fg_7164_5.jpg");
 
-var_dump($giocattolo);
+// Cuccia
+$cuccia = new Bed("Cuccia imbottita", 43.09, $dogCategory, "large", "cotone");
+$cuccia->setImage("https://shop-cdn-m.mediazs.com/bilder/super/offerta/letto/per/cani/cozy/ecolife/grigio/7/400/180712_pla_cozy_ecolife_grau_fg_6369_7.jpg");
 
 
+// var_dump($product);
 
-var_dump($product);
+$products = [
+    $croccantini,
+    $giocattolo,
+    $cuccia,
+];
+
+// var_dump($products);
+
 
 ?>
 
@@ -47,9 +60,40 @@ var_dump($product);
 </head>
 <body>
 
-    <h1>PHP OOP Animals Shop</h1>
+
+    <div class="container py-5">
+
+        <h1>PHP OOP Animals Shop</h1>
 
 
+        <div class="row row-col-4 py-5">
+
+            <?php
+            foreach ($products as $product) {
+                ?>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="<?= $product->image ?>" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title"> <?= $product->name ?> </h5>
+                            <h6><small> <?= $product->type ?> </small></h6>
+                            <p class="card-text"> €<?= $product->price ?> 
+                            <span class="card-text"> <i class="fa-solid <?= $product->category->icon ?>"></i> </span>
+                            </p>
+                            <a href="#" class="btn btn-success">Aggiungi al carrello</a>
+                        </div>
+                    </div>
+                </div>
+                <?php
+            }
+
+            ?>
+
+        </div>
+
+
+    </div>
+   
 
 
     <!-- Bootstrap -->

@@ -24,5 +24,16 @@ class Product{
         $this->category = $_category;
 
     }
+    
+    /**
+     * setImage
+     *
+     * @param  string $image
+     */
+    public function setImage($_image){
+
+        $this->image = $_image;
+
+    }
 
 }

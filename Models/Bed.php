@@ -2,9 +2,9 @@
 
 require_once __DIR__ . '/Product.php';
 
-class Toy extends Product{
+class Bed extends Product{
 
-    public $type = 'Giocattolo';
+    public $type = 'Cuccia';
     public $material;
     public $size;
     /**
