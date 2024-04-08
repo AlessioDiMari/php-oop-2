@@ -3,6 +3,7 @@
 require_once './Models/Category.php';
 require_once './Models/Product.php';
 require_once './Models/Food.php';
+require_once './Models/Toy.php';
 
 
 // Categoria
@@ -17,7 +18,11 @@ $product = new Product("Osso", 4.99, $dogCategory);
 // Cibo
 $croccantini = new Food("Croccantini", 19.99, $dogCategory, 5.00, "manzo", 2);
 
-var_dump($croccantini);
+// Giocattolo
+$giocattolo = new Toy("Lenza con fiocco", 2.59, $catCategory, "medium", "plastic");
+
+var_dump($giocattolo);
+
 
 
 var_dump($product);

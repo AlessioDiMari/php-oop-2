@@ -16,7 +16,7 @@ class Food extends Product{
      * @param  float $_price
      * @param  Category $_category
      * @param  float $_weight
-     * @param  mixed $_ingredient
+     * @param  string $_ingredient
      * @param  int $_minAge
      */
     function __construct($_name, $_price, Category $_category, $_weight, $_ingredient, $_minAge) {
