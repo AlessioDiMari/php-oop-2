@@ -21,11 +21,11 @@ $croccantini = new Food("Croccantini", 19.99, $dogCategory, 5.00, "manzo", 2);
 $croccantini->setImage("https://shop-cdn-m.mediazs.com/bilder/wolf/of/wilderness/velvet/gloom/tacchino/trota/0/400/wow_redclassic_velvetgloom_frontright_12kg_1000x1000_0.jpg");
 
 // Giocattolo
-$giocattolo = new Toy("Lenza con fiocco", 2.59, $catCategory, "medium", "plastic");
+$giocattolo = new Toy("Lenza con fiocco", 2.59, $catCategory, "medium");
 $giocattolo->setImage("https://shop-cdn-m.mediazs.com/bilder/lenza/gioco/bird/5/400/26412_pla__katzenangel_bird_fg_7164_5.jpg");
 
 // Cuccia
-$cuccia = new Bed("Cuccia imbottita", 43.09, $dogCategory, "large", "cotone");
+$cuccia = new Bed("Cuccia imbottita", 43.09, $dogCategory, "large");
 $cuccia->setImage("https://shop-cdn-m.mediazs.com/bilder/super/offerta/letto/per/cani/cozy/ecolife/grigio/7/400/180712_pla_cozy_ecolife_grau_fg_6369_7.jpg");
 
 

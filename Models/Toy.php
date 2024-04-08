@@ -5,7 +5,6 @@ require_once __DIR__ . '/Product.php';
 class Toy extends Product{
 
     public $type = 'Giocattolo';
-    public $material;
     public $size;
     /**
      * __construct
@@ -14,14 +13,12 @@ class Toy extends Product{
      * @param  float $_price
      * @param  Category $_category
      * @param  string $_size
-     * @param  string $_material
      */
-    function __construct($_name, $_price, Category $_category, $_size, $_material,) {
+    function __construct($_name, $_price, Category $_category, $_size) {
         
         parent::__construct($_name, $_price, $_category);
 
         $this->size = $_size;
-        $this->material = $_material;
 
     }
 
