@@ -1,9 +1,11 @@
 <?php
 
 require_once __DIR__ . '/Product.php';
+require_once __DIR__ . '/Traits/GetMaterial.php';
 
 class Bed extends Product{
 
+    use GetMaterial;
     public $type = 'Cuccia';
     public $size;
     /**
