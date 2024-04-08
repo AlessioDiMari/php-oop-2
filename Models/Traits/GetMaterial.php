@@ -3,7 +3,12 @@
 trait GetMaterial{
 
     protected $material;
-
+    
+    /**
+     * setMaterial
+     *
+     * @param  string $material
+     */
     public function setMaterial($material){
 
         $this->material = $material;
