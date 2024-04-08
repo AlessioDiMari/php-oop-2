@@ -2,13 +2,23 @@
 
 require_once './Models/Category.php';
 require_once './Models/Product.php';
+require_once './Models/Food.php';
 
+
+// Categoria
 $catCategory = new Category("Gatto", "fa-cat");
 $dogCategory = new Category("Cane", "fa-dog");
 
 
-
+// Prodotto
 $product = new Product("Osso", 4.99, $dogCategory);
+
+
+// Cibo
+$croccantini = new Food("Croccantini", 19.99, $dogCategory, 5.00, "manzo", 2);
+
+var_dump($croccantini);
+
 
 var_dump($product);
 
@@ -17,7 +27,7 @@ var_dump($product);
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
