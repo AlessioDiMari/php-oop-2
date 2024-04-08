@@ -1,5 +1,7 @@
 <?php
 
+require_once __DIR__ . '/Category.php';
+
 class Product{
 
     public $name;
@@ -12,10 +14,10 @@ class Product{
      *
      * @param  string $_name
      * @param  float $_price
-     * @param  string $_category
+     * @param  Category $_category
      * @return void
      */
-    function __construct($_name, $_price, $_category){
+    function __construct($_name, $_price, Category $_category){
         
         $this->name = $_name;
         $this->price = $_price;
