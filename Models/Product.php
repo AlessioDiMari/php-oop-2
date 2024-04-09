@@ -2,6 +2,10 @@
 
 require_once __DIR__ . '/Category.php';
 
+
+
+
+
 class Product{
 
     public $name;
@@ -34,6 +38,25 @@ class Product{
 
         $this->image = $_image;
 
+    }
+
+    
+    /**
+     * setPrice
+     *
+     * @param  float $_price
+     */
+    public function setPrice($_price){
+
+        // Controllo se il prezzo inserito è un valore numerico
+        if (is_numeric($_price)) {
+    
+            $this->price = $_price;
+            
+        } else {
+            throw new Exception('Inserisci un prezzo consono');
+        }
+    
     }
 
 }

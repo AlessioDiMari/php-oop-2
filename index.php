@@ -26,6 +26,15 @@ $giocattolo->setImage("https://shop-cdn-m.mediazs.com/bilder/lenza/gioco/bird/5/
 $giocattolo->setMaterial("plastica");
 $giocattolo->setSize("normal");
 
+
+try {
+    $giocattolo->setPrice("ciao");
+} catch (Exception $e) {
+    echo 'Caught exception: ',  $e->getMessage(), "\n";
+}
+
+
+
 // Cuccia
 $cuccia = new Bed("Cuccia imbottita", 43.09, $dogCategory);
 $cuccia->setImage("https://shop-cdn-m.mediazs.com/bilder/super/offerta/letto/per/cani/cozy/ecolife/grigio/7/400/180712_pla_cozy_ecolife_grau_fg_6369_7.jpg");
@@ -41,7 +50,7 @@ $products = [
     $cuccia,
 ];
 
-var_dump($products);
+// var_dump($products);
 
 
 ?>
